@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Assets/style/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -28,11 +28,69 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+
+    <!-- Timeblocks in this div -->
+    <!-- start them all in the future as default -->
     <div class="container">
-      <!-- Timeblocks go here -->
+      <!-- 9AM -->
+      <div class="row time-block future">
+        <div class="hour">9AM</div>
+        <div class="description"></div>
+        <button class="saveBtn"></button>
+      </div>
+      <!-- 10AM -->
+      <div class="row time-block future">
+        <div class="hour">10AM</div>
+        <div class="description"></div>
+        <button class="saveBtn"></button>
+      </div>
+      <!--11AM -->
+      <div class="row time-block future">
+        <div class="hour">11AM</div>
+        <div class="description"></div>
+        <button class="saveBtn"></button>
+      </div>
+      <!-- 12AM -->
+      <div class="row time-block future">
+        <div class="hour">12AM</div>
+        <div class="description"></div>
+        <button class="saveBtn"></button>
+      </div>
+      <!-- 1PM -->
+      <div class="row time-block future">
+        <div class="hour">1PM</div>
+        <div class="description"></div>
+        <button class="saveBtn"></button>
+      </div>
+      <!-- 2PM -->
+      <div class="row time-block future">
+        <div class="hour">2PM</div>
+        <div class="description"></div>
+        <button class="saveBtn"></button>
+      </div>
+      <!-- 3PM -->
+      <div class="row time-block future">
+        <div class="hour">3PM</div>
+        <div class="description"></div>
+        <button class="saveBtn"></button>
+      </div>
+      <!-- 4PM -->
+      <div class="row time-block future">
+        <div class="hour">4PM</div>
+        <div class="description"></div>
+        <button class="saveBtn"></button>
+      </div>
+      <!-- 5PM -->
+      <div class="row time-block future">
+        <div class="hour">5PM</div>
+        <div class="description"></div>
+        <button class="saveBtn"></button>
+      </div>
     </div>
 
+    <!-- links to external js and CDNs for jquery and moment.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="Assets/js/index.js"></script>
   </body>
 </html>
