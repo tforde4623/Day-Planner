@@ -29,9 +29,15 @@ function timeHandler() {
     // get the time out of the descriptions id, and use that to compare to current
     let elementID = $(this).attr('id');
     let elementTime = parseInt(elementID);
+    let currentTime;
     // using 24 hour time for comparison
-    let currentTime = parseInt(moment().format('h')) + 12;
-
+    // make sure this if else works
+    if (moment().format('a') === 'am' || moment().format('h a') === '12 pm') {
+      currentTime = parseInt(moment().format('h'))
+    } else if (moment().format('a') === 'pm') {
+      currentTime = parseInt(moment().format('h')) + 12;
+    }
+    //console.log(currentTime, elementTime, moment().format('a'));
     if (elementTime === currentTime) {
       // set to present (ex. 9 - 9:59 is current hour)
       $(this).parent().attr('class', 'row time-block present');
