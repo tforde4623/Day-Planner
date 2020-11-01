@@ -31,9 +31,9 @@ function timeHandler() {
     let elementTime = parseInt(elementID);
     let currentTime;
     // using 24 hour time for comparison
-    // make sure this if else works
+    // since using 24 hour time, we need to check if we need to add 12 to it, (5pm = 12 + 5 = 17 (1700 hrs), depending on am/pm)
     if (moment().format('a') === 'am' || moment().format('h a') === '12 pm') {
-      currentTime = parseInt(moment().format('h'))
+      currentTime = parseInt(moment().format('h'));
     } else if (moment().format('a') === 'pm') {
       currentTime = parseInt(moment().format('h')) + 12;
     }
