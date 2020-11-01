@@ -1,4 +1,3 @@
-// fix it so it clears the data when empty
 // function for loading text
 function loadEvents() {
   for (let i = 9; i <= 17; i++) {
@@ -15,6 +14,7 @@ function saveText() {
   // push to localStorage
   localStorage.setItem(btnValue, text);
 }
+
 // function to handle displaying current date in html
 function currentDay() {
   let currentDayEl = $('#currentDay');
@@ -37,6 +37,7 @@ function timeHandler() {
     } else if (moment().format('a') === 'pm') {
       currentTime = parseInt(moment().format('h')) + 12;
     }
+
     //console.log(currentTime, elementTime, moment().format('a'));
     if (elementTime === currentTime) {
       // set to present (ex. 9 - 9:59 is current hour)
@@ -48,6 +49,7 @@ function timeHandler() {
       // set to future
       $(this).parent().attr('class', 'row time-block future');
     }
+    
   });
 }
 
