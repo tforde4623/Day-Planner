@@ -49,7 +49,7 @@ function timeHandler() {
       // set to future
       $(this).parent().attr('class', 'row time-block future');
     }
-    
+
   });
 }
 
