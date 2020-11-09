@@ -30,11 +30,12 @@ function timeHandler() {
     let elementID = $(this).attr('id');
     let elementTime = parseInt(elementID);
     let currentTime;
+    console.log(moment().format('h a'));
     // using 24 hour time for comparison
     // since using 24 hour time, we need to check if we need to add 12 to it, (5pm = 12 + 5 = 17 (1700 hrs), depending on am/pm)
-    if (moment().format('a') === 'am' || moment().format('h a') === '12 pm') {
+    if (moment().format('a') === 'am' && moment().format('h a') != '12 am' || moment().format('h a') === '12 pm' && moment().format('h a') != '12 am') {
       currentTime = parseInt(moment().format('h'));
-    } else if (moment().format('a') === 'pm') {
+    } else if (moment().format('a') === 'pm' || moment().format('h a') === '12 am') {
       currentTime = parseInt(moment().format('h')) + 12;
     }
 
