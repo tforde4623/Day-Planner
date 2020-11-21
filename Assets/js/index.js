@@ -38,7 +38,7 @@ function timeHandler() {
     } else if (moment().format('a') === 'pm' || moment().format('h a') === '12 am') {
       currentTime = parseInt(moment().format('h')) + 12;
     }
-
+    
     //console.log(currentTime, elementTime, moment().format('a'));
     if (elementTime === currentTime) {
       // set to present (ex. 9 - 9:59 is current hour)
